@@ -197,6 +197,30 @@ Message: ${message}`;
   }
 })();
 /* ══════════════════════════════════════════════════
+   6. FLOATING LABELS — persistence
+══════════════════════════════════════════════════ */
+(function initFloatingLabels() {
+  const inputs = document.querySelectorAll('.form-group-modern input, .form-group-modern select, .form-group-modern textarea');
+
+  function checkValue(el) {
+    if (el.value !== "") {
+      el.parentElement.classList.add('filled');
+    } else {
+      el.parentElement.classList.remove('filled');
+    }
+  }
+
+  inputs.forEach(input => {
+    // Initial check
+    checkValue(input);
+
+    // Update on change
+    input.addEventListener('input', () => checkValue(input));
+    input.addEventListener('change', () => checkValue(input));
+  });
+})();
+
+/* ══════════════════════════════════════════════════
    7. INPUT SHAKE ANIMATION (CSS inject)
 ══════════════════════════════════════════════════ */
 (function injectShakeCss() {
