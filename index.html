@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- encoding test -->
 <html lang="en">
 
 <head>
@@ -23,7 +23,7 @@
   <nav id="navbar" class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo" aria-label="LINLYT Home">
-        <img src="public/logonavbar.png" alt="LINLYT logo" class="logo-image">
+        <img src="public/newlogoai.png" alt="LINLYT logo" class="logo-image">
         <span class="logo-text">LINLYT</span>
       </a>
       <ul class="nav-links" role="list">
@@ -48,11 +48,11 @@
     </div>
   </nav>
 
+
   <!-- ═══════════════════════════════════════════
        HERO SECTION
   ═══════════════════════════════════════════ -->
   <section class="hero" id="hero" aria-label="Hero">
-    <!-- Ambient diagonal shapes -->
     <div class="hero-shapes" aria-hidden="true">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -62,16 +62,17 @@
     </div>
 
     <div class="hero-inner">
-      <!-- Left: copy -->
       <div class="hero-content">
-        <img src="./public/newlogoai.png" alt="LINLYT Logo" class="hero-logo">
-        <p class="hero-body">
-          LINLYT delivers innovative software, web, and mobile solutions that help
-          businesses grow, automate, and stay ahead in a fast-changing digital world.
-        </p>
+        <h1 class="hero-heading">
+          Designing systems<br>
+          around your business<br>
+          needs.
+        </h1>
+        <div class="hero-actions">
+          <a href="#contact" class="hero-text-cta">Start a Project</a>
+        </div>
       </div>
 
-      <!-- Right: visual -->
       <div class="hero-visual" aria-hidden="true" aria-label="LINLYT technology illustration">
         <div class="hero-illustration float-slow">
           <div class="illus-core">
@@ -92,7 +93,6 @@
               </svg>
             </div>
           </div>
-          <!-- Orbiting nodes -->
           <div class="orbit orbit-1">
             <div class="orbit-node node-teal"></div>
           </div>
@@ -106,7 +106,6 @@
       </div>
     </div>
 
-    <!-- Scroll indicator -->
     <div class="scroll-indicator" aria-label="Scroll down">
       <div class="scroll-line"></div>
       <span>Scroll</span>
@@ -134,122 +133,67 @@
   </div>
 
   <!-- ═══════════════════════════════════════════
-       SERVICES SECTION
+       SERVICES SECTION — Video Carousel
   ═══════════════════════════════════════════ -->
   <section class="services" id="services" aria-label="Services">
-    <div class="section-inner">
-      <div class="section-header" data-reveal>
-        <p class="section-eyebrow">What We Do</p>
-        <h2 class="section-title">End-to-end digital<br />solutions for every need</h2>
-        <p class="section-sub">
-          From concept to deployment, LINLYT delivers complete digital ecosystems
-          built for performance, scalability, and long-term success.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card" data-reveal data-delay="0">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none">
-              <rect x="8" y="8" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
-              <rect x="26" y="8" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
-              <rect x="8" y="26" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
-              <rect x="26" y="26" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
-            </svg>
-          </div>
-          <h3 class="card-title">Software Development</h3>
-          <p class="card-body">Custom software, enterprise solutions, SaaS products, and desktop applications
-            engineered to your exact business requirements.</p>
-          <a href="#contact" class="card-link" id="service-software-link">Learn more <span
-              aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="service-card" data-reveal data-delay="120">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none">
-              <rect x="6" y="10" width="36" height="26" rx="3" stroke="currentColor" stroke-width="1.5" />
-              <path d="M16 38H32M24 36V38" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-              <path d="M14 20L19 25L14 30M24 30H34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <h3 class="card-title">Web Development</h3>
-          <p class="card-body">Business websites, e-commerce platforms, web applications, and CMS solutions
-            designed for performance and seamless user experience.</p>
-          <a href="#contact" class="card-link" id="service-web-link">Learn more <span aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="service-card" data-reveal data-delay="240">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none">
-              <rect x="16" y="4" width="16" height="40" rx="3" stroke="currentColor" stroke-width="1.5" />
-              <path d="M20 8H28M22 40H26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-              <path d="M8 18H16M32 18H40M8 30H16M32 30H40" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" />
-            </svg>
-          </div>
-          <h3 class="card-title">Mobile App Development</h3>
-          <p class="card-body">Android, iOS, and cross-platform applications built with Flutter and React Native
-            for a consistent, high-quality mobile experience.</p>
-          <a href="#contact" class="card-link" id="service-mobile-link">Learn more <span aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="service-card" data-reveal data-delay="0">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5" />
-              <path d="M18 24C18 20.686 20.686 18 24 18" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" />
-              <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.5" />
-              <path d="M24 10V14M24 34V38M10 24H14M34 24H38" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" />
-            </svg>
-          </div>
-          <h3 class="card-title">UI/UX Design</h3>
-          <p class="card-body">User-centric interface design, UX optimization, prototyping, wireframing,
-            and brand identity that converts visitors into loyal customers.</p>
-          <a href="#contact" class="card-link" id="service-design-link">Learn more <span aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="service-card" data-reveal data-delay="120">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none">
-              <path d="M24 8L40 16V28C40 36 32 42 24 44C16 42 8 36 8 28V16L24 8Z" stroke="currentColor"
-                stroke-width="1.5" stroke-linejoin="round" />
-              <path d="M18 24L22 28L30 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <h3 class="card-title">IT Consulting</h3>
-          <p class="card-body">Strategic technology consulting, startup tech support, architecture planning,
-            and product strategy to guide your digital journey confidently.</p>
-          <a href="#contact" class="card-link" id="service-consult-link">Learn more <span
-              aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="service-card" data-reveal data-delay="240">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none">
-              <path d="M8 24H40M8 16H40M8 32H24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-              <circle cx="36" cy="32" r="6" stroke="currentColor" stroke-width="1.5" />
-              <path d="M36 29V35M33 32H39" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-          </div>
-          <h3 class="card-title">Maintenance & Support</h3>
-          <p class="card-body">Ongoing software maintenance, bug fixing, performance optimization, system upgrades,
-            and 24/7 technical support to keep your systems running at peak.</p>
-          <a href="#contact" class="card-link" id="service-support-link">Learn more <span
-              aria-hidden="true">→</span></a>
+    <div class="services-sticky-wrapper">
+      <div class="section-inner">
+        <div class="section-header" data-reveal>
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-title">End-to-end digital<br />solutions for every need</h2>
+          <p class="section-sub">
+            From concept to deployment, LINLYT delivers complete digital ecosystems
+            built for performance, scalability, and long-term success.
+          </p>
         </div>
       </div>
 
-      <div class="services-footer" data-reveal>
-        <a href="#contact" class="view-all-link">
-          View All Services
-          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
+      <div class="services-horizontal-container">
+        <div class="services-track">
+
+          <div class="service-slide">
+            <div class="service-video-wrap">
+              <video src="public/software.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="service-slide-name">Software Development</p>
+          </div>
+
+          <div class="service-slide">
+            <div class="service-video-wrap">
+              <video src="public/web.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="service-slide-name">Web Development</p>
+          </div>
+
+          <div class="service-slide">
+            <div class="service-video-wrap">
+              <video src="public/ap.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="service-slide-name">Mobile App Development</p>
+          </div>
+
+          <div class="service-slide">
+            <div class="service-video-wrap">
+              <video src="public/uiux.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="service-slide-name">UI/UX Design</p>
+          </div>
+
+          <div class="service-slide">
+            <div class="service-video-wrap">
+              <video src="public/it.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="service-slide-name">IT Consulting</p>
+          </div>
+
+          <div class="service-slide">
+            <div class="service-video-wrap">
+              <video src="public/maintainance.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <p class="service-slide-name">Maintenance & Support</p>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -257,78 +201,97 @@
   <!-- ═══════════════════════════════════════════
        ABOUT SECTION
   ═══════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION — Cinematic Immersive
+  ═══════════════════════════════════════════ -->
   <section class="about" id="about" aria-label="About LINLYT">
-    <div class="about-diagonal" aria-hidden="true"></div>
-    <div class="section-inner about-inner">
-      <div class="about-content reveal-left" data-reveal>
-        <p class="section-eyebrow eyebrow-light">Who We Are</p>
-        <h2 class="section-title title-light">
+    <div class="about-video-bg">
+      <video src="public/linbg.mp4" autoplay muted loop playsinline></video>
+      <div class="about-overlay"></div>
+    </div>
+
+    <div class="section-inner about-inner-cinematic">
+      <div class="about-content-cinematic">
+        <h2 class="about-heading-cinematic" data-seq-reveal="1">
           Forward-thinking technology<br />for your business
         </h2>
-        <p class="about-body">
+        <p class="about-description-cinematic" data-seq-reveal="2">
           LINLYT is a forward-thinking technology company delivering end-to-end digital
           and software solutions for businesses of all sizes. We specialize in building
           scalable, innovative, and user-centric products that empower organizations to
           grow and succeed in a competitive digital landscape.
         </p>
-        <p class="about-body">
-          <strong style="color:rgba(255,255,255,0.85);">Our Vision:</strong> To become a trusted global technology
-          partner, empowering businesses through innovative and reliable digital solutions that drive lasting
-          transformation.
-        </p>
-        <a href="#contact" class="btn btn-teal" id="about-cta-btn">Talk to Our Team</a>
       </div>
-      <div class="about-visual">
-        <div class="about-strengths">
-          <div class="strength-item reveal-right" data-reveal data-delay="100">
-            <div class="strength-dot-wrap">
-              <div class="strength-dot"></div>
-              <div class="strength-line"></div>
-            </div>
-            <div class="strength-info">
-              <h3 class="strength-title">Fast execution</h3>
-              <p class="strength-text">Rapid development cycles without compromising on code quality.</p>
-            </div>
+
+      <div class="about-mac-window" data-seq-reveal="3">
+        <div class="mac-title-bar">
+          <div class="mac-dots">
+            <span class="mac-dot red"></span>
+            <span class="mac-dot yellow"></span>
+            <span class="mac-dot green"></span>
           </div>
-          <div class="strength-item reveal-right" data-reveal data-delay="200">
-            <div class="strength-dot-wrap">
-              <div class="strength-dot"></div>
-              <div class="strength-line"></div>
-            </div>
-            <div class="strength-info">
-              <h3 class="strength-title">Modern tech stack</h3>
-              <p class="strength-text">Built with the latest frameworks for performance and longevity.</p>
-            </div>
-          </div>
-          <div class="strength-item reveal-right" data-reveal data-delay="300">
-            <div class="strength-dot-wrap">
-              <div class="strength-dot"></div>
-              <div class="strength-line"></div>
-            </div>
-            <div class="strength-info">
-              <h3 class="strength-title">Scalable architecture</h3>
-              <p class="strength-text">Systems designed to grow effortlessly as your business expands.</p>
-            </div>
-          </div>
-          <div class="strength-item reveal-right" data-reveal data-delay="400">
-            <div class="strength-dot-wrap">
-              <div class="strength-dot"></div>
-            </div>
-            <div class="strength-info">
-              <h3 class="strength-title">Strong design focus</h3>
-              <p class="strength-text">Premium UI/UX that makes your product stand out in the market.</p>
-            </div>
-          </div>
+          <div class="mac-title">System Architecture</div>
         </div>
-        <div class="about-visual-glow"></div>
+        <div class="mac-window-body">
+          <aside class="mac-sidebar">
+            <div class="sidebar-item active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <span>Overview</span>
+            </div>
+            <div class="sidebar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              <span>Build</span>
+            </div>
+            <div class="sidebar-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+              <span>Settings</span>
+            </div>
+          </aside>
+          <main class="mac-main">
+            <div class="mac-grid">
+              <div class="mac-card">
+                <div class="card-head">
+                  <span class="card-dot"></span>
+                  <h4>Fast Execution</h4>
+                </div>
+                <p>Rapid development cycles optimized for speed and quality.</p>
+              </div>
+              <div class="mac-card">
+                <div class="card-head">
+                  <span class="card-dot"></span>
+                  <h4>Modern Tech Stack</h4>
+                </div>
+                <p>Built with industry-leading frameworks for maximum performance.</p>
+              </div>
+              <div class="mac-card">
+                <div class="card-head">
+                  <span class="card-dot"></span>
+                  <h4>Scalable Architecture</h4>
+                </div>
+                <p>Intelligent systems designed to grow with your business needs.</p>
+              </div>
+              <div class="mac-card">
+                <div class="card-head">
+                  <span class="card-dot"></span>
+                  <h4>Strong Design Focus</h4>
+                </div>
+                <p>Premium UI/UX tailored for impactful user experiences.</p>
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       INDUSTRIES SECTION (Projects)
+       INDUSTRIES SECTION
   ═══════════════════════════════════════════ -->
   <section class="projects" id="projects" aria-label="Industries">
+    <div class="projects-video-bg">
+      <video src="public/videoproject.mp4" autoplay muted loop playsinline></video>
+      <div class="projects-video-overlay"></div>
+    </div>
     <div class="projects-diagonal" aria-hidden="true"></div>
     <div class="section-inner">
       <div class="section-header" data-reveal>
@@ -337,36 +300,124 @@
       </div>
 
       <div class="projects-grid">
-        <div class="industry-card" data-reveal>
-          <h3 class="industry-name">Startups</h3>
+        <div class="industry-item" data-reveal>
+          <div class="industry-info">
+            <h3 class="industry-title">Startups</h3>
+            <p class="industry-desc">Rapid prototyping and MVP development for visionary founders.</p>
+          </div>
+          <div class="industry-line"></div>
         </div>
-        <div class="industry-card" data-reveal data-delay="80">
-          <h3 class="industry-name">E-commerce</h3>
+        <div class="industry-item" data-reveal data-delay="100">
+          <div class="industry-info">
+            <h3 class="industry-title">E-commerce</h3>
+            <p class="industry-desc">Scalable platforms optimized for conversion and growth.</p>
+          </div>
+          <div class="industry-line"></div>
         </div>
-        <div class="industry-card" data-reveal data-delay="160">
-          <h3 class="industry-name">Healthcare</h3>
+        <div class="industry-item" data-reveal data-delay="200">
+          <div class="industry-info">
+            <h3 class="industry-title">Healthcare</h3>
+            <p class="industry-desc">Secure and compliant digital health solutions.</p>
+          </div>
+          <div class="industry-line"></div>
         </div>
-        <div class="industry-card" data-reveal data-delay="240">
-          <h3 class="industry-name">Education</h3>
+        <div class="industry-item" data-reveal data-delay="300">
+          <div class="industry-info">
+            <h3 class="industry-title">Education</h3>
+            <p class="industry-desc">Innovative learning management systems and apps.</p>
+          </div>
+          <div class="industry-line"></div>
         </div>
-        <div class="industry-card" data-reveal data-delay="320">
-          <h3 class="industry-name">Finance & FinTech</h3>
+        <div class="industry-item" data-reveal data-delay="400">
+          <div class="industry-info">
+            <h3 class="industry-title">Finance</h3>
+            <p class="industry-desc">Robust fintech applications with enterprise-grade security.</p>
+          </div>
+          <div class="industry-line"></div>
         </div>
-        <div class="industry-card" data-reveal data-delay="400">
-          <h3 class="industry-name">Real Estate</h3>
-        </div>
-        <div class="industry-card" data-reveal data-delay="480">
-          <h3 class="industry-name">Logistics</h3>
-        </div>
-        <div class="industry-card" data-reveal data-delay="560">
-          <h3 class="industry-name">Hospitality</h3>
+        <div class="industry-item" data-reveal data-delay="500">
+          <div class="industry-info">
+            <h3 class="industry-title">Logistics</h3>
+            <p class="industry-desc">Smart supply chain and fleet management systems.</p>
+          </div>
+          <div class="industry-line"></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       WHY CHOOSE LINLYT (Process)
+       TEAM SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="team" id="team" aria-label="Our Team">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">Our Leadership</p>
+        <h2 class="section-title">The visionaries behind<br />LINLYT technology</h2>
+      </div>
+
+      <div class="team-grid">
+        <!-- CEO -->
+        <div class="team-member" data-reveal>
+          <div class="member-image-wrap">
+            <img src="public/shuaib.jpeg" alt="Mohammed Shuaib" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Mohammed Shuaib</h3>
+                <p class="member-role">Founder & CEO</p>
+                <a href="mailto:shuaiblinlyt@gmail.com" class="member-email">shuaiblinlyt@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTO -->
+        <div class="team-member" data-reveal data-delay="100">
+          <div class="member-image-wrap">
+            <img src="public/sudu.jpeg" alt="Sudarshanan NS" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Sudarshanan NS</h3>
+                <p class="member-role">Founder & CTO</p>
+                <a href="mailto:sudarshanlinlyt@gmail.com" class="member-email">sudarshanlinlyt@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COO -->
+        <div class="team-member" data-reveal data-delay="200">
+          <div class="member-image-wrap">
+            <img src="public/shaaz.jpeg" alt="Abdul Sahaz NS" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Abdul Sahaz NS</h3>
+                <p class="member-role">Founder & COO</p>
+                <a href="mailto:sahazlinlyt@gmail.com" class="member-email">sahazlinlyt@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CMO -->
+        <div class="team-member" data-reveal data-delay="300">
+          <div class="member-image-wrap">
+            <img src="public/fayiz.jpeg" alt="Fayiz Moideen" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Fayiz Moideen</h3>
+                <p class="member-role">Founder & CMO</p>
+                <a href="mailto:fayizlilnlyt@gmail.com" class="member-email">fayizlilnlyt@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY CHOOSE LINLYT
   ═══════════════════════════════════════════ -->
   <section class="process" id="process" aria-label="Why Choose LINLYT">
     <div class="section-inner">
@@ -375,41 +426,27 @@
         <h2 class="section-title">The LINLYT advantage<br />for your business</h2>
       </div>
 
-      <div class="process-steps">
-        <div class="process-step" data-reveal id="step-tailored">
-          <div class="step-number">01</div>
-          <div class="step-connector"></div>
-          <div class="step-content">
-            <h3 class="step-title">Tailored Solutions</h3>
-            <p class="step-body">Every product we build is customized to your exact business goals,
-              workflows, and growth vision — no generic templates.</p>
+      <div class="process-window" data-reveal>
+        <div class="process-row">
+          <div class="process-item" data-reveal data-delay="100">
+            <div class="item-dot"></div>
+            <h3 class="item-title">Tailored Solutions</h3>
+            <p class="item-body">Custom products built to your exact business goals and growth vision.</p>
           </div>
-        </div>
-        <div class="process-step" data-reveal data-delay="100" id="step-expert">
-          <div class="step-number">02</div>
-          <div class="step-connector"></div>
-          <div class="step-content">
-            <h3 class="step-title">Expert Team</h3>
-            <p class="step-body">A skilled, innovative team of developers, designers, and consultants
-              committed to delivering excellence at every stage.</p>
+          <div class="process-item" data-reveal data-delay="200">
+            <div class="item-dot"></div>
+            <h3 class="item-title">Expert Team</h3>
+            <p class="item-body">Innovative developers and designers committed to excellence at every stage.</p>
           </div>
-        </div>
-        <div class="process-step" data-reveal data-delay="200" id="step-delivery">
-          <div class="step-number">03</div>
-          <div class="step-connector"></div>
-          <div class="step-content">
-            <h3 class="step-title">On-Time Delivery</h3>
-            <p class="step-body">Agile methodology and rigorous quality assurance ensure your product
-              ships on schedule — with zero compromise on quality.</p>
+          <div class="process-item" data-reveal data-delay="300">
+            <div class="item-dot"></div>
+            <h3 class="item-title">On-Time Delivery</h3>
+            <p class="item-body">Agile methodology ensures your product ships on schedule without compromise.</p>
           </div>
-        </div>
-        <div class="process-step" data-reveal data-delay="300" id="step-scalable">
-          <div class="step-number">04</div>
-          <div class="step-connector step-connector-last"></div>
-          <div class="step-content">
-            <h3 class="step-title">Future-Ready Systems</h3>
-            <p class="step-body">Cost-effective, scalable architectures built to grow with your business —
-              designed to adapt to the demands of tomorrow's digital world.</p>
+          <div class="process-item" data-reveal data-delay="400">
+            <div class="item-dot"></div>
+            <h3 class="item-title">Future-Ready</h3>
+            <p class="item-body">Scalable architectures designed to adapt to the demands of tomorrow.</p>
           </div>
         </div>
       </div>
@@ -417,85 +454,23 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       LEADERSHIP (Team Grid)
+       REVEAL SECTION — Cinematic Intro
   ═══════════════════════════════════════════ -->
-  <section class="leadership" id="leadership" aria-label="Leadership Team">
-    <div class="section-inner">
-      <div class="section-header" data-reveal>
-        <p class="section-eyebrow eyebrow-light">Our Team</p>
-        <h2 class="section-title title-light">The minds behind LINLYT</h2>
-      </div>
-
-      <div class="team-grid">
-        <!-- Founder & CEO -->
-        <div class="team-card" data-reveal data-delay="0">
-          <div class="team-image-wrap">
-            <div class="team-avatar">MS</div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Mohammed Shuaib</h3>
-            <p class="team-role">Founder & CEO</p>
-            <a href="mailto:shuaiblinlyt@gmail.com" class="team-email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <path d="M22 6l-10 7L2 6" />
-              </svg>
-              shuaiblinlyt@gmail.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Co-Founder & CTO -->
-        <div class="team-card" data-reveal data-delay="100">
-          <div class="team-image-wrap">
-            <div class="team-avatar">SN</div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Sudarshanan NS</h3>
-            <p class="team-role">Founder & CTO</p>
-            <a href="mailto:sudarshanlinlyt@gmail.com" class="team-email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <path d="M22 6l-10 7L2 6" />
-              </svg>
-              sudarshanlinlyt@gmail.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Co-Founder & COO -->
-        <div class="team-card" data-reveal data-delay="200">
-          <div class="team-image-wrap">
-            <div class="team-avatar">AS</div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Abdul Sahaz</h3>
-            <p class="team-role">Founder & COO</p>
-            <a href="mailto:sahazlinlyt@gmail.com" class="team-email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <path d="M22 6l-10 7L2 6" />
-              </svg>
-              sahazlinlyt@gmail.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Co-Founder & CMO -->
-        <div class="team-card" data-reveal data-delay="300">
-          <div class="team-image-wrap">
-            <div class="team-avatar">FM</div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Fayiz Moideen</h3>
-            <p class="team-role">Founder & CMO</p>
-            <a href="mailto:fayizlinlyt@gmail.com" class="team-email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <path d="M22 6l-10 7L2 6" />
-              </svg>
-              fayizlinlyt@gmail.com
-            </a>
+  <section class="reveal-section" id="reveal">
+    <div class="reveal-sticky">
+      <div class="reveal-master-container">
+        <div class="reveal-logo-container">
+          <img src="public/image.png" alt="LINLYT" class="reveal-logo">
+          <!-- Nested mask for perfect centering and clipping during zoom -->
+          <div class="reveal-content-mask">
+            <div class="reveal-content">
+              <h2 class="reveal-heading">Forward-thinking technology<br />for your business</h2>
+              <p class="reveal-description">
+                At LINLYT, we craft intelligent digital ecosystems that scale with your ambitions. 
+                From concept to deployment, we redefine industry standards through precision engineering 
+                and visionary design.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -503,10 +478,9 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       CONTACT / CTA SECTION
+       CONTACT
   ═══════════════════════════════════════════ -->
   <section class="contact" id="contact" aria-label="Contact">
-    <!-- Ambient background effects -->
     <div class="contact-bg-glows" aria-hidden="true">
       <div class="glow glow-1"></div>
       <div class="glow glow-2"></div>
@@ -520,7 +494,7 @@
         </div>
         <p class="contact-body">Tell us about your project and our team will come together to scope, design,
           and deliver a solution built around your business needs and growth goals.</p>
-        
+
         <div class="contact-details">
           <a href="mailto:teamlinlyt@gmail.com" class="contact-link-item" id="contact-email">
             <span class="icon-circle">
@@ -534,11 +508,12 @@
               <span class="link-value">teamlinlyt@gmail.com</span>
             </div>
           </a>
-          
+
           <a href="tel:+916238398173" class="contact-link-item" id="contact-phone">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.81 12.81 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l2.28-2.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.81 12.81 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l2.28-2.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
             </span>
             <div class="link-info">
@@ -546,12 +521,14 @@
               <span class="link-value">+91 6238 398 173</span>
             </div>
           </a>
-          
-          <a href="https://www.linlyt.com" target="_blank" rel="noopener" class="contact-link-item" id="contact-website">
+
+          <a href="https://www.linlyt.com" target="_blank" rel="noopener" class="contact-link-item"
+            id="contact-website">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10" />
-                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
               </svg>
             </span>
             <div class="link-info">
@@ -571,7 +548,6 @@
                 <label for="cf-name">Full Name</label>
                 <div class="input-focus-line"></div>
               </div>
-              
               <div class="form-group-modern">
                 <input type="text" id="cf-company" name="company" />
                 <label for="cf-company">Company</label>
@@ -617,7 +593,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- ═══════════════════════════════════════════
        FOOTER
