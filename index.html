@@ -29,7 +29,7 @@
       <ul class="nav-links" role="list">
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#capabilities" class="nav-link">Technologies</a></li>
+
         <li><a href="#projects" class="nav-link">Industries</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -41,7 +41,7 @@
       <ul role="list">
         <li><a href="#services" class="mobile-link">Services</a></li>
         <li><a href="#about" class="mobile-link">About</a></li>
-        <li><a href="#capabilities" class="mobile-link">Technologies</a></li>
+
         <li><a href="#projects" class="mobile-link">Industries</a></li>
         <li><a href="#contact" class="mobile-link">Contact</a></li>
       </ul>
@@ -59,15 +59,36 @@
       <div class="shape shape-3"></div>
       <div class="shape shape-4"></div>
       <div class="shape shape-noise"></div>
+      <canvas id="hero-mesh" class="hero-mesh-canvas"></canvas>
+      <div class="cursor-glow"></div>
     </div>
 
     <div class="hero-inner">
       <div class="hero-content">
-        <h1 class="hero-heading">
-          Designing systems<br>
-          around your business<br>
-          needs.
-        </h1>
+        <div class="hero-caption-rotator">
+          <div class="hero-caption active">
+            <h1 class="hero-heading">
+              Designing systems<br>
+              around your business<br>
+              needs.
+            </h1>
+          </div>
+          <div class="hero-caption">
+            <h1 class="hero-heading">
+              Building intelligent digital<br>
+              experiences for modern<br>
+              brands.
+            </h1>
+          </div>
+          <div class="hero-caption">
+            <h1 class="hero-heading">
+              Transforming ambitious<br>
+              ideas into scalable<br>
+              technology.
+            </h1>
+          </div>
+          <div class="caption-underline"></div>
+        </div>
         <div class="hero-actions">
           <a href="#contact" class="hero-text-cta">Start a Project</a>
         </div>
@@ -82,14 +103,18 @@
             <div class="illus-center">
               <div class="illus-glow"></div>
               <svg class="illus-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="12" width="20" height="20" rx="3" stroke="#00D4B4" stroke-width="1.5" fill="none" />
-                <rect x="48" y="12" width="20" height="20" rx="3" stroke="#00D4B4" stroke-width="1.5" fill="none" />
-                <rect x="12" y="48" width="20" height="20" rx="3" stroke="#00D4B4" stroke-width="1.5" fill="none" />
-                <rect x="48" y="48" width="20" height="20" rx="3" stroke="#00D4B4" stroke-width="1.5" fill="none" />
-                <path d="M32 22H48M22 32V48M58 32V48M32 58H48" stroke="#00D4B4" stroke-width="1.5"
+                <rect x="12" y="12" width="20" height="20" rx="3" stroke="rgba(120, 140, 255, 0.4)" stroke-width="1.5"
+                  fill="none" />
+                <rect x="48" y="12" width="20" height="20" rx="3" stroke="rgba(120, 140, 255, 0.4)" stroke-width="1.5"
+                  fill="none" />
+                <rect x="12" y="48" width="20" height="20" rx="3" stroke="rgba(120, 140, 255, 0.4)" stroke-width="1.5"
+                  fill="none" />
+                <rect x="48" y="48" width="20" height="20" rx="3" stroke="rgba(120, 140, 255, 0.4)" stroke-width="1.5"
+                  fill="none" />
+                <path d="M32 22H48M22 32V48M58 32V48M32 58H48" stroke="rgba(120, 140, 255, 0.4)" stroke-width="1.5"
                   stroke-linecap="round" />
-                <circle cx="40" cy="40" r="5" fill="#00D4B4" opacity="0.4" />
-                <circle cx="40" cy="40" r="2.5" fill="#00D4B4" />
+                <circle cx="40" cy="40" r="5" fill="rgba(120, 140, 255, 0.4)" opacity="0.4" />
+                <circle cx="40" cy="40" r="2.5" fill="rgba(120, 140, 255, 0.4)" />
               </svg>
             </div>
           </div>
@@ -113,9 +138,9 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       MARQUEE RIBBON
+       MARQUEE RIBBON — Slim Transition Divider
   ═══════════════════════════════════════════ -->
-  <div class="ribbon" aria-hidden="true">
+  <div class="ribbon ribbon-divider" aria-hidden="true">
     <div class="ribbon-track">
       <span>Software Development</span><span class="ribbon-dot">·</span>
       <span>Web Development</span><span class="ribbon-dot">·</span>
@@ -129,78 +154,10 @@
       <span>Mobile Applications</span><span class="ribbon-dot">·</span>
       <span>UI/UX Design</span><span class="ribbon-dot">·</span>
       <span>IT Consulting</span><span class="ribbon-dot">·</span>
+      <span>Assistant Support</span><span class="ribbon-dot">·</span>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════
-       SERVICES SECTION — Video Carousel
-  ═══════════════════════════════════════════ -->
-  <section class="services" id="services" aria-label="Services">
-    <div class="services-sticky-wrapper">
-      <div class="section-inner">
-        <div class="section-header" data-reveal>
-          <p class="section-eyebrow">What We Do</p>
-          <h2 class="section-title">End-to-end digital<br />solutions for every need</h2>
-          <p class="section-sub">
-            From concept to deployment, LINLYT delivers complete digital ecosystems
-            built for performance, scalability, and long-term success.
-          </p>
-        </div>
-      </div>
-
-      <div class="services-horizontal-container">
-        <div class="services-track">
-
-          <div class="service-slide">
-            <div class="service-video-wrap">
-              <video src="public/software.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <p class="service-slide-name">Software Development</p>
-          </div>
-
-          <div class="service-slide">
-            <div class="service-video-wrap">
-              <video src="public/web.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <p class="service-slide-name">Web Development</p>
-          </div>
-
-          <div class="service-slide">
-            <div class="service-video-wrap">
-              <video src="public/ap.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <p class="service-slide-name">Mobile App Development</p>
-          </div>
-
-          <div class="service-slide">
-            <div class="service-video-wrap">
-              <video src="public/uiux.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <p class="service-slide-name">UI/UX Design</p>
-          </div>
-
-          <div class="service-slide">
-            <div class="service-video-wrap">
-              <video src="public/it.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <p class="service-slide-name">IT Consulting</p>
-          </div>
-
-          <div class="service-slide">
-            <div class="service-video-wrap">
-              <video src="public/maintainance.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <p class="service-slide-name">Maintenance & Support</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       ABOUT SECTION
-  ═══════════════════════════════════════════ -->
   <!-- ═══════════════════════════════════════════
        ABOUT SECTION — Cinematic Immersive
   ═══════════════════════════════════════════ -->
@@ -235,15 +192,26 @@
         <div class="mac-window-body">
           <aside class="mac-sidebar">
             <div class="sidebar-item active">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
               <span>Overview</span>
             </div>
             <div class="sidebar-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
               <span>Build</span>
             </div>
             <div class="sidebar-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+              </svg>
               <span>Settings</span>
             </div>
           </aside>
@@ -283,6 +251,85 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES SECTION — Video Carousel
+  ═══════════════════════════════════════════ -->
+  <section class="services" id="services" aria-label="Services">
+    <div class="services-sticky-wrapper">
+      <div class="services-grid">
+        <!-- Left: Text Column (Fixed/Stable) -->
+        <div class="services-text-col">
+          <div class="services-text-content">
+            <div class="services-indicator" data-reveal>Our Services</div>
+            <h2 class="services-title" data-reveal data-delay="100">
+              Forward-thinking solutions for digital excellence
+            </h2>
+            <p class="services-description" data-reveal data-delay="200">
+              We combine technical expertise with creative vision to build products
+              that drive growth and redefine possibilities.
+            </p>
+            <div class="services-counter" data-reveal data-delay="300">
+              <span class="counter-current">01</span>
+              <span class="counter-divider">/</span>
+              <span class="counter-total">06</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual Column (Carousel) -->
+        <div class="services-visual-col">
+          <div class="services-carousel-container">
+            <div class="services-track">
+              <div class="service-slide">
+                <div class="service-video-wrap">
+                  <video src="public/software.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <p class="service-slide-name">Software Development</p>
+              </div>
+
+              <div class="service-slide">
+                <div class="service-video-wrap">
+                  <video src="public/web.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <p class="service-slide-name">Web Development</p>
+              </div>
+
+              <div class="service-slide">
+                <div class="service-video-wrap">
+                  <video src="public/ap.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <p class="service-slide-name">Mobile App Development</p>
+              </div>
+
+              <div class="service-slide">
+                <div class="service-video-wrap">
+                  <video src="public/uiux.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <p class="service-slide-name">UI/UX Design</p>
+              </div>
+
+              <div class="service-slide">
+                <div class="service-video-wrap">
+                  <video src="public/it.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <p class="service-slide-name">IT Consulting</p>
+              </div>
+
+              <div class="service-slide">
+                <div class="service-video-wrap">
+                  <video src="public/maintainance.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <p class="service-slide-name">Maintenance & Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ═══════════════════════════════════════════
        INDUSTRIES SECTION
@@ -351,63 +398,98 @@
   ═══════════════════════════════════════════ -->
   <section class="team" id="team" aria-label="Our Team">
     <div class="section-inner">
-      <div class="section-header" data-reveal>
+      <div class="section-header">
         <p class="section-eyebrow">Our Leadership</p>
         <h2 class="section-title">The visionaries behind<br />LINLYT technology</h2>
       </div>
 
-      <div class="team-grid">
-        <!-- CEO -->
-        <div class="team-member" data-reveal>
+      <div class="leadership-grid">
+        <!-- Card 1: Haneef -->
+        <div class="founder-card">
+          <div class="member-image-wrap">
+            <img src="public/haneef.JPEG" alt="Mohammed Haneef KA" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Mohammed Haneef KA</h3>
+                <p class="member-role">Founder & CEO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Saquib -->
+        <div class="founder-card">
+          <div class="member-image-wrap">
+            <img src="public/saquib.JPEG" alt="Mohamed Saquib" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Mohamed Saquib</h3>
+                <p class="member-role">Founder & CMO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Shuaib -->
+        <div class="founder-card">
           <div class="member-image-wrap">
             <img src="public/shuaib.jpeg" alt="Mohammed Shuaib" class="member-image">
             <div class="member-overlay">
               <div class="member-info">
                 <h3 class="member-name">Mohammed Shuaib</h3>
-                <p class="member-role">Founder & CEO</p>
-                <a href="mailto:shuaiblinlyt@gmail.com" class="member-email">shuaiblinlyt@gmail.com</a>
+                <p class="member-role">Founder & COO</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- CTO -->
-        <div class="team-member" data-reveal data-delay="100">
+        <!-- Card 4: Sudarshanan -->
+        <div class="founder-card">
           <div class="member-image-wrap">
-            <img src="public/sudu.jpeg" alt="Sudarshanan NS" class="member-image">
+            <img src="public/sudulin.jpeg" alt="Sudarshanan NS" class="member-image">
             <div class="member-overlay">
               <div class="member-info">
                 <h3 class="member-name">Sudarshanan NS</h3>
                 <p class="member-role">Founder & CTO</p>
-                <a href="mailto:sudarshanlinlyt@gmail.com" class="member-email">sudarshanlinlyt@gmail.com</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- COO -->
-        <div class="team-member" data-reveal data-delay="200">
+        <!-- Card 5: Razlin -->
+        <div class="founder-card">
+          <div class="member-image-wrap">
+            <img src="public/razlin.jpg" alt="Fathimath Shafna Razlin" class="member-image">
+            <div class="member-overlay">
+              <div class="member-info">
+                <h3 class="member-name">Fathimath Shafna Razlin</h3>
+                <p class="member-role">Founder & CFO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Sahaz -->
+        <div class="founder-card">
           <div class="member-image-wrap">
             <img src="public/shaaz.jpeg" alt="Abdul Sahaz NS" class="member-image">
             <div class="member-overlay">
               <div class="member-info">
                 <h3 class="member-name">Abdul Sahaz NS</h3>
-                <p class="member-role">Founder & COO</p>
-                <a href="mailto:sahazlinlyt@gmail.com" class="member-email">sahazlinlyt@gmail.com</a>
+                <p class="member-role">Founder & CAO</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- CMO -->
-        <div class="team-member" data-reveal data-delay="300">
+        <!-- Card 7: Fayiz -->
+        <div class="founder-card">
           <div class="member-image-wrap">
             <img src="public/fayiz.jpeg" alt="Fayiz Moideen" class="member-image">
             <div class="member-overlay">
               <div class="member-info">
                 <h3 class="member-name">Fayiz Moideen</h3>
-                <p class="member-role">Founder & CMO</p>
-                <a href="mailto:fayizlilnlyt@gmail.com" class="member-email">fayizlilnlyt@gmail.com</a>
+                <p class="member-role">Founder & CDO</p>
               </div>
             </div>
           </div>
@@ -464,11 +546,11 @@
           <!-- Nested mask for perfect centering and clipping during zoom -->
           <div class="reveal-content-mask">
             <div class="reveal-content">
-              <h2 class="reveal-heading">Forward-thinking technology<br />for your business</h2>
+              <h2 class="reveal-heading">Where visionary design<br />meets powerful technology</h2>
               <p class="reveal-description">
-                At LINLYT, we craft intelligent digital ecosystems that scale with your ambitions. 
-                From concept to deployment, we redefine industry standards through precision engineering 
-                and visionary design.
+                From concept to execution, LINLYT creates future-ready digital solutions
+                that elevate brands, accelerate growth, and redefine how businesses
+                connect with the modern world.
               </p>
             </div>
           </div>
@@ -481,115 +563,130 @@
        CONTACT
   ═══════════════════════════════════════════ -->
   <section class="contact" id="contact" aria-label="Contact">
-    <div class="contact-bg-glows" aria-hidden="true">
-      <div class="glow glow-1"></div>
-      <div class="glow glow-2"></div>
+    <div class="contact-orbs" aria-hidden="true">
+      <div class="contact-orb orb-1"></div>
+      <div class="contact-orb orb-2"></div>
+      <div class="contact-orb orb-3"></div>
     </div>
 
     <div class="section-inner contact-inner">
-      <div class="contact-content reveal-left" data-reveal>
-        <div class="section-header">
-          <p class="section-eyebrow">Get In Touch</p>
-          <h2 class="section-title">Ready to build your<br />next digital product?</h2>
+      <div class="contact-content-wrap reveal-left" data-reveal>
+        <div class="contact-header">
+          <span class="premium-label">Get In Touch</span>
+          <h2 class="premium-heading">Where visionary design<br />meets powerful tech</h2>
+          <p class="premium-paragraph">
+            Tell us about your project and our team will come together to scope, design,
+            and deliver a solution built around your business needs and growth goals.
+          </p>
         </div>
-        <p class="contact-body">Tell us about your project and our team will come together to scope, design,
-          and deliver a solution built around your business needs and growth goals.</p>
 
-        <div class="contact-details">
-          <a href="mailto:teamlinlyt@gmail.com" class="contact-link-item" id="contact-email">
-            <span class="icon-circle">
+        <div class="contact-cards-stack">
+          <a href="mailto:teamlinlyt@gmail.com" class="premium-contact-card" id="contact-email">
+            <div class="card-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <path d="M22 6l-10 7L2 6" />
               </svg>
-            </span>
-            <div class="link-info">
-              <span class="link-label">Email Us</span>
-              <span class="link-value">teamlinlyt@gmail.com</span>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Email Us</span>
+              <span class="card-value">teamlinlyt@gmail.com</span>
             </div>
           </a>
 
-          <a href="tel:+916238398173" class="contact-link-item" id="contact-phone">
-            <span class="icon-circle">
+          <a href="tel:+919008635444" class="premium-contact-card" id="contact-phone">
+            <div class="card-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path
                   d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.81 12.81 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l2.28-2.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
-            </span>
-            <div class="link-info">
-              <span class="link-label">Call Anytime</span>
-              <span class="link-value">+91 6238 398 173</span>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Call Anytime</span>
+              <span class="card-value">+91 900 8635 444</span>
             </div>
           </a>
 
-          <a href="https://www.linlyt.com" target="_blank" rel="noopener" class="contact-link-item"
+          <a href="https://www.linlyt.com" target="_blank" rel="noopener" class="premium-contact-card"
             id="contact-website">
-            <span class="icon-circle">
+            <div class="card-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10" />
                 <path
                   d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
               </svg>
-            </span>
-            <div class="link-info">
-              <span class="link-label">Visit Website</span>
-              <span class="link-value">www.linlyt.com</span>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Visit Website</span>
+              <span class="card-value">www.linlyt.com</span>
             </div>
           </a>
         </div>
       </div>
 
-      <div class="contact-form-container reveal-right" data-reveal data-delay="150">
-        <div class="form-glass-panel">
-          <form class="contact-form-modern" id="contact-form" novalidate>
-            <div class="form-grid">
-              <div class="form-group-modern">
-                <input type="text" id="cf-name" name="name" required />
+      <div class="contact-form-wrapper reveal-right" data-reveal data-delay="150">
+        <div class="luxury-form-panel">
+          <form class="luxury-contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="luxury-input-group" id="group-name">
+                <input type="text" id="cf-name" name="name" placeholder=" " required />
                 <label for="cf-name">Full Name</label>
-                <div class="input-focus-line"></div>
+                <div class="input-glow"></div>
+                <span class="field-error" id="err-name">Please enter your name</span>
               </div>
-              <div class="form-group-modern">
-                <input type="text" id="cf-company" name="company" />
+              <div class="luxury-input-group">
+                <input type="text" id="cf-company" name="company" placeholder=" " />
                 <label for="cf-company">Company</label>
-                <div class="input-focus-line"></div>
+                <div class="input-glow"></div>
               </div>
             </div>
 
-            <div class="form-group-modern">
-              <input type="email" id="cf-email" name="email" required />
+            <div class="luxury-input-group" id="group-email">
+              <input type="email" id="cf-email" name="email" placeholder=" " required />
               <label for="cf-email">Email Address</label>
-              <div class="input-focus-line"></div>
+              <div class="input-glow"></div>
+              <span class="field-error" id="err-email">Please enter a valid email</span>
             </div>
 
-            <div class="form-group-modern">
-              <select id="cf-project" name="project" required>
-                <option value="" disabled selected></option>
-                <option>Software Development</option>
-                <option>Web Development</option>
-                <option>Mobile App Development</option>
-                <option>UI/UX Design</option>
-                <option>IT Consulting</option>
-                <option>Maintenance & Support</option>
-              </select>
-              <label for="cf-project">Service Needed</label>
-              <div class="input-focus-line"></div>
+            <!-- Custom Service Dropdown (CSD) -->
+            <div class="luxury-input-group csd-wrap" id="csd-wrap">
+              <input type="hidden" id="cf-project" name="project" />
+              <div class="csd-trigger" id="csd-trigger" role="button" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+                <span class="csd-display" id="csd-display"></span>
+                <label class="csd-label">Service Needed</label>
+                <svg class="csd-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </div>
+              <ul class="csd-list" id="csd-list" role="listbox">
+                <li class="csd-option" role="option" data-value="Web Development">Web Development</li>
+                <li class="csd-option" role="option" data-value="Mobile App Development">Mobile App Development</li>
+                <li class="csd-option" role="option" data-value="UI/UX Design">UI/UX Design</li>
+                <li class="csd-option" role="option" data-value="Branding">Branding</li>
+                <li class="csd-option" role="option" data-value="AI Solutions">AI Solutions</li>
+                <li class="csd-option" role="option" data-value="SaaS Development">SaaS Development</li>
+                <li class="csd-option" role="option" data-value="IT Consulting">IT Consulting</li>
+                <li class="csd-option" role="option" data-value="Maintenance & Support">Maintenance & Support</li>
+              </ul>
+              <span class="field-error" id="err-project">Please select a service</span>
             </div>
 
-            <div class="form-group-modern">
-              <textarea id="cf-message" name="message" rows="4"></textarea>
+            <div class="luxury-input-group" id="group-message">
+              <textarea id="cf-message" name="message" rows="4" placeholder=" " required></textarea>
               <label for="cf-message">Tell us about your project…</label>
-              <div class="input-focus-line"></div>
+              <div class="input-glow"></div>
+              <span class="field-error" id="err-message">Please enter your project details</span>
             </div>
 
-            <button type="submit" class="btn-premium-submit" id="form-submit-btn">
-              <span>Send Enquiry</span>
+            <button type="submit" class="premium-cta-submit" id="form-submit-btn">
+              <span>Send Message</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </button>
           </form>
         </div>
-        <div class="form-accent-glow"></div>
+        <div class="panel-background-glow"></div>
       </div>
     </div>
   </section>
@@ -650,6 +747,446 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    /**
+     * LINLYT — Global Animation & Interaction Manager
+     * Handles: Replay on Scroll, Hero Mesh, Caption Rotation, and Services Parallax
+     */
+    (function () {
+      // ─── 1. GLOBAL REPLAY-ON-SCROLL OBSERVER ─────────────────
+      const revealElements = document.querySelectorAll('[data-reveal]:not(#about *), .ribbon');
+      const serviceSlidesList = document.querySelectorAll('.service-slide');
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = entry.target.getAttribute('data-delay') || 0;
+            const seqDelay = entry.target.getAttribute('data-seq-reveal') ? (entry.target.getAttribute('data-seq-reveal') * 200) : 0;
+            const totalDelay = parseInt(delay) + seqDelay;
+
+            setTimeout(() => {
+              if (entry.target.classList.contains('ribbon')) {
+                entry.target.classList.add('ribbon-surfaced');
+              } else {
+                entry.target.classList.add('revealed');
+              }
+            }, totalDelay);
+          } else {
+            if (entry.target.classList.contains('ribbon')) {
+              entry.target.classList.remove('ribbon-surfaced');
+            } else {
+              entry.target.classList.remove('revealed');
+            }
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+      serviceSlidesList.forEach(el => revealObserver.observe(el));
+
+
+      // ─── 2. ABOUT SECTION DEDICATED REPLAY FIX ──────────────
+      const aboutSection = document.getElementById('about');
+      const aboutElements = aboutSection ? aboutSection.querySelectorAll('[data-reveal], [data-seq-reveal]') : [];
+
+      const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            aboutElements.forEach((el) => {
+              const delay = el.getAttribute('data-delay') || 0;
+              const seq = el.getAttribute('data-seq-reveal') || 0;
+              const totalDelay = parseInt(delay) + (parseInt(seq) * 200);
+
+              setTimeout(() => {
+                if (entry.target.classList.contains('active')) {
+                  el.classList.add('revealed');
+                }
+              }, totalDelay);
+            });
+          } else {
+            entry.target.classList.remove('active');
+            aboutElements.forEach(el => el.classList.remove('revealed'));
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -10% 0px'
+      });
+
+      if (aboutSection) aboutObserver.observe(aboutSection);
+
+
+      // ─── 3. SERVICES SCROLL-DRIVEN SHOWCASE ──────────────
+      (function () {
+        const servicesSection = document.querySelector('.services');
+        const slides = document.querySelectorAll('.service-slide');
+        const counterCurrent = document.querySelector('.counter-current');
+
+        if (!servicesSection || !slides.length) return;
+
+        let lerpVirtualIndex = 0;
+
+        function updateServicesShowcase() {
+          const rect = servicesSection.getBoundingClientRect();
+          const viewportH = window.innerHeight;
+          const sectionH = rect.height;
+
+          const totalScroll = sectionH - viewportH;
+          const currentScroll = -rect.top;
+          const progress = Math.min(Math.max(currentScroll / totalScroll, 0), 1);
+
+          // Horizontal Glide Mapping
+          const targetVirtualIndex = progress * (slides.length - 1);
+          if (!isNaN(targetVirtualIndex)) {
+            lerpVirtualIndex += (targetVirtualIndex - lerpVirtualIndex) * 0.05; // Slightly slower lerp for luxury feel
+          }
+
+          // Update Counter
+          if (counterCurrent) {
+            const activeIndex = Math.round(lerpVirtualIndex);
+            counterCurrent.textContent = (activeIndex + 1).toString().padStart(2, '0');
+          }
+
+          slides.forEach((slide, i) => {
+            const distance = i - lerpVirtualIndex;
+            const absDist = Math.abs(distance);
+
+            // Premium Depth Carousel Mapping
+            const translateX = distance * 560; // Increased spacing
+            const translateY = (1 - Math.min(absDist, 1)) * -12; // Active card elevation
+            const translateZ = -absDist * 180; // Depth push
+            const scale = 1.0 - Math.min(absDist, 1) * 0.15;
+
+            // Opacity & Blur curves
+            const opacity = 1.0 - Math.min(absDist, 1) * 0.6;
+            const blur = Math.min(absDist, 1) * 4;
+            const zIndex = 30 - Math.floor(absDist * 10);
+
+            // Apply hardware-accelerated style
+            slide.style.transform = `translate3d(${translateX}px, ${translateY}px, ${translateZ}px) scale(${scale})`;
+            slide.style.opacity = Math.max(opacity, 0.15);
+            slide.style.filter = `blur(${blur}px)`;
+            slide.style.zIndex = zIndex;
+
+            if (absDist < 0.5) {
+              slide.classList.add('is-active');
+            } else {
+              slide.classList.remove('is-active');
+            }
+          });
+
+          requestAnimationFrame(updateServicesShowcase);
+        }
+
+        requestAnimationFrame(updateServicesShowcase);
+      })();
+
+
+
+
+
+
+
+
+      // ─── 4. HERO MESH ANIMATION (Interactive) ───────────────
+      (function () {
+        const canvas = document.getElementById('hero-mesh');
+        const cursorGlow = document.querySelector('.cursor-glow');
+        const hero = document.getElementById('hero');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        let width, height, points = [];
+        const pointCount = 45;
+        const connectionDist = 180;
+        const speed = 0.4;
+
+        let mouse = { x: 0, y: 0 };
+        let lerpMouse = { x: 0, y: 0 };
+        let firstMove = true;
+        let isInside = false;
+
+        function init() {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+          points = [];
+          for (let i = 0; i < pointCount; i++) {
+            points.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * speed - speed * 0.5,
+              vy: (Math.random() - 0.5) * speed,
+              size: Math.random() * 1.5 + 0.5,
+              baseSize: 0
+            });
+            points[i].baseSize = points[i].size;
+          }
+        }
+
+        hero.addEventListener('mousemove', (e) => {
+          const rect = hero.getBoundingClientRect();
+          const targetX = e.clientX - rect.left;
+          const targetY = e.clientY - rect.top;
+          
+          mouse.x = targetX;
+          mouse.y = targetY;
+          isInside = true;
+
+          if (firstMove) {
+            lerpMouse.x = targetX;
+            lerpMouse.y = targetY;
+            firstMove = false;
+            if (cursorGlow) cursorGlow.style.opacity = '1';
+          }
+        });
+
+        hero.addEventListener('mouseleave', () => {
+          isInside = false;
+          if (cursorGlow) cursorGlow.style.opacity = '0';
+        });
+
+        const cta = document.querySelector('.hero-actions');
+        if (cta && cursorGlow) {
+          cta.addEventListener('mouseenter', () => cursorGlow.classList.add('magnetic'));
+          cta.addEventListener('mouseleave', () => cursorGlow.classList.remove('magnetic'));
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, width, height);
+          
+          // Smoother, more responsive lerp (0.15 for snappier follow)
+          const factor = 0.15;
+          lerpMouse.x += (mouse.x - lerpMouse.x) * factor;
+          lerpMouse.y += (mouse.y - lerpMouse.y) * factor;
+
+          if (cursorGlow && isInside) {
+            cursorGlow.style.transform = `translate3d(${lerpMouse.x}px, ${lerpMouse.y}px, 0) translate(-50%, -50%)`;
+          }
+
+          const gradient = ctx.createLinearGradient(width, 0, width * 0.5, height);
+          gradient.addColorStop(0, 'rgba(80, 150, 255, 0.15)');
+          gradient.addColorStop(1, 'rgba(40, 80, 255, 0)');
+          ctx.strokeStyle = gradient;
+
+          points.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0) p.x = width; if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height; if (p.y > height) p.y = 0;
+
+            const mDx = p.x - lerpMouse.x;
+            const mDy = p.y - lerpMouse.y;
+            const mDist = Math.sqrt(mDx * mDx + mDy * mDy);
+
+            if (mDist < 200) {
+              p.size = p.baseSize + (1 - mDist / 200) * 2;
+              ctx.fillStyle = `rgba(120, 180, 255, ${0.2 + (1 - mDist / 200) * 0.4})`;
+            } else {
+              p.size = p.baseSize;
+              ctx.fillStyle = 'rgba(100, 180, 255, 0.2)';
+            }
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
+
+            points.forEach(p2 => {
+              const dx = p.x - p2.x; const dy = p.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < connectionDist && dist > 0) {
+                ctx.lineWidth = (1 - dist / connectionDist) * 0.8;
+                ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+              }
+            });
+          });
+          requestAnimationFrame(draw);
+        }
+        window.addEventListener('resize', init);
+        init(); draw();
+      })();
+
+
+      // ─── 5. HERO CAPTION ROTATION (With Scroll Pause) ───────
+      (function () {
+        const captions = document.querySelectorAll('.hero-caption');
+        const heroSection = document.getElementById('hero');
+        if (!captions.length) return;
+
+        let currentIndex = 0;
+        let rotationInterval;
+        const displayTime = 4000;
+
+        function rotateCaptions() {
+          const current = captions[currentIndex];
+          const nextIndex = (currentIndex + 1) % captions.length;
+          const next = captions[nextIndex];
+
+          current.classList.remove('active');
+          current.classList.add('exit');
+          next.classList.remove('exit');
+          next.classList.add('active');
+
+          setTimeout(() => { current.classList.remove('exit'); }, 1100);
+          currentIndex = nextIndex;
+        }
+
+        const heroObserver = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            if (!rotationInterval) rotationInterval = setInterval(rotateCaptions, displayTime);
+          } else {
+            clearInterval(rotationInterval);
+            rotationInterval = null;
+            // Reset to first caption when leaving
+            currentIndex = 0;
+            captions.forEach((c, i) => {
+              c.classList.remove('active', 'exit');
+              if (i === 0) c.classList.add('active');
+            });
+          }
+        }, { threshold: 0.1 });
+
+        heroObserver.observe(heroSection);
+      })();
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('contact-form');
+      var submitBtn = document.getElementById('form-submit-btn');
+
+      // ── Custom Dropdown Logic ────────────────────────────
+      var csdWrap = document.getElementById('csd-wrap');
+      var csdTrigger = document.getElementById('csd-trigger');
+      var csdList = document.getElementById('csd-list');
+      var csdDisplay = document.getElementById('csd-display');
+      var csdInput = document.getElementById('cf-project');
+      var csdOptions = document.querySelectorAll('.csd-option');
+
+      function toggleDropdown() {
+        var isOpen = csdWrap.classList.contains('open');
+        csdWrap.classList.toggle('open', !isOpen);
+        csdTrigger.setAttribute('aria-expanded', !isOpen);
+      }
+
+      csdTrigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleDropdown();
+      });
+
+      csdOptions.forEach(function(opt) {
+        opt.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var val = opt.getAttribute('data-value');
+          csdInput.value = val;
+          csdDisplay.textContent = val;
+          csdWrap.classList.add('selected');
+          csdWrap.classList.remove('open');
+          csdTrigger.setAttribute('aria-expanded', 'false');
+          
+          // Clear error if selected
+          csdWrap.classList.remove('has-error');
+
+          csdOptions.forEach(function(o) { o.classList.remove('active'); });
+          opt.classList.add('active');
+        });
+      });
+
+      document.addEventListener('click', function() {
+        csdWrap.classList.remove('open');
+        csdTrigger.setAttribute('aria-expanded', 'false');
+      });
+
+      // ── Form Validation & WhatsApp ───────────────────────
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        var name = (document.getElementById('cf-name').value || '').trim();
+        var company = (document.getElementById('cf-company').value || '').trim() || 'Not provided';
+        var email = (document.getElementById('cf-email').value || '').trim();
+        var service = (csdInput.value || '').trim();
+        var message = (document.getElementById('cf-message').value || '').trim();
+
+        var errors = false;
+
+        // Reset errors
+        form.querySelectorAll('.luxury-input-group').forEach(function(g) { g.classList.remove('has-error'); });
+
+        // Name
+        if (!name) {
+          document.getElementById('group-name').classList.add('has-error');
+          errors = true;
+        }
+        
+        // Email
+        if (!email || !isValidEmail(email)) {
+          var emailGrp = document.getElementById('group-email');
+          emailGrp.classList.add('has-error');
+          var errSpan = emailGrp.querySelector('.field-error');
+          errSpan.textContent = !email ? 'Please enter your email' : 'Please enter a valid email address';
+          errors = true;
+        }
+
+        // Service
+        if (!service) {
+          csdWrap.classList.add('has-error');
+          errors = true;
+        }
+
+        // Message
+        if (!message) {
+          document.getElementById('group-message').classList.add('has-error');
+          errors = true;
+        }
+
+        if (errors) return;
+
+        // Loading state
+        var btnSpan = submitBtn.querySelector('span');
+        var origLabel = btnSpan ? btnSpan.textContent : 'Send Message';
+        submitBtn.disabled = true;
+        submitBtn.classList.add('is-loading');
+        if (btnSpan) btnSpan.textContent = 'Preparing enquiry...';
+
+        // Message building
+        var waMessage = "Hello LINLYT,\n\nNew Enquiry Submitted\n\n" +
+          "Name: " + name + "\n" +
+          "Company: " + company + "\n" +
+          "Email: " + email + "\n" +
+          "Service Needed: " + service + "\n\n" +
+          "Project Details:\n" + message + "\n\n" +
+          "Please get back to me.";
+
+        var waUrl = "https://wa.me/919008635444?text=" + encodeURIComponent(waMessage);
+
+        setTimeout(function() {
+          window.open(waUrl, '_blank');
+          
+          setTimeout(function() {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('is-loading');
+            if (btnSpan) btnSpan.textContent = origLabel;
+            form.reset();
+            csdInput.value = '';
+            csdDisplay.textContent = '';
+            csdWrap.classList.remove('selected');
+            csdOptions.forEach(function(o) { o.classList.remove('active'); });
+          }, 1500);
+        }, 800);
+      });
+
+      // Live validation clear
+      form.querySelectorAll('input, textarea').forEach(function(el) {
+        el.addEventListener('input', function() {
+          el.closest('.luxury-input-group').classList.remove('has-error');
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

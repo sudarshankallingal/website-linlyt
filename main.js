@@ -5,6 +5,113 @@
 'use strict';
 
 /* ══════════════════════════════════════════════════
+   0. PREMIUM SMOOTH SCROLL ENGINE
+   Apple/Cinematic inertia-based scrolling
+   ─ Desktop only, touch-safe, a11y-aware
+══════════════════════════════════════════════════ */
+(function initSmoothScroll() {
+  // ── Skip on touch devices (preserve native touch scroll)
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+
+  // ── Skip if user prefers reduced motion (accessibility)
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // ── State
+  var targetY   = window.scrollY;
+  var currentY  = window.scrollY;
+  var rafId     = null;
+  var isLocked  = false;   // true during anchor jumps
+
+  // ── Lerp factor: lower = slower / more buttery (Apple ≈ 0.06–0.08)
+  var LERP      = 0.07;
+
+  // ── Wheel speed multiplier (< 1 = slower than native)
+  var SPEED     = 0.88;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function getMaxScroll() {
+    return document.documentElement.scrollHeight - window.innerHeight;
+  }
+
+  // ── Core animation tick
+  function tick() {
+    var distance = targetY - currentY;
+
+    if (Math.abs(distance) < 0.08) {
+      currentY = targetY;
+      window.scrollTo(0, currentY);
+      rafId = null;
+      return;
+    }
+
+    currentY = lerp(currentY, targetY, LERP);
+    window.scrollTo(0, currentY);
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function startRAF() {
+    if (!rafId) rafId = requestAnimationFrame(tick);
+  }
+
+  // ── Intercept wheel events
+  window.addEventListener('wheel', function (e) {
+    if (isLocked) return;
+    e.preventDefault();
+
+    // Normalise delta across browsers / devices
+    var delta = e.deltaY;
+    if (e.deltaMode === 1) delta *= 40;   // Firefox line mode
+    if (e.deltaMode === 2) delta *= 800;  // page mode
+
+    delta *= SPEED;
+
+    targetY = Math.max(0, Math.min(getMaxScroll(), targetY + delta));
+    startRAF();
+  }, { passive: false });
+
+  // ── Keep targetY in sync if programmatic scroll occurs
+  //    (e.g. from the reveal-section JS or CSS scroll-behavior anchors)
+  window.addEventListener('scroll', function () {
+    if (!rafId && !isLocked) {
+      targetY  = window.scrollY;
+      currentY = window.scrollY;
+    }
+  }, { passive: true });
+
+  // ── Handle anchor link navigation (nav links, hero CTA, etc.)
+  //    Smoothly animate to section instead of instant jump
+  function handleAnchorClick(e) {
+    var href = e.currentTarget.getAttribute('href');
+    if (!href || href.charAt(0) !== '#') return;
+
+    var target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+    isLocked = true;
+
+    // Cancel any in-progress smooth tick
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+
+    var destY = Math.max(0, Math.min(
+      getMaxScroll(),
+      target.getBoundingClientRect().top + window.scrollY - 0
+    ));
+
+    targetY  = destY;
+    currentY = window.scrollY;
+    isLocked = false;
+    startRAF();
+  }
+
+  // Attach to all internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', handleAnchorClick);
+  });
+})();
+
+/* ══════════════════════════════════════════════════
    1. NAVBAR
 ══════════════════════════════════════════════════ */
 (function initNavbar() {
@@ -57,7 +164,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   elements.forEach(el => observer.observe(el));
 })();
@@ -114,45 +221,7 @@
   requestAnimationFrame(rafLoop);
 })();
 
-/* ══════════════════════════════════════════════════
-   5. CONTACT FORM — WhatsApp
-══════════════════════════════════════════════════ */
-(function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const submit = document.getElementById('form-submit-btn');
-  if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = form.querySelector('#cf-name').value.trim();
-    const email = form.querySelector('#cf-email').value.trim();
-    const message = form.querySelector('#cf-message').value.trim();
-
-    if (!name || !email) { shakeField(!name ? '#cf-name' : '#cf-email'); return; }
-    if (!isValidEmail(email)) { shakeField('#cf-email'); return; }
-
-    submit.disabled = true;
-    submit.textContent = 'Opening WhatsApp…';
-
-    const phone = "916238398173";
-    const text = `New enquiry:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
-
-    setTimeout(() => {
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
-      submit.disabled = false;
-      submit.textContent = 'Send Enquiry';
-      form.reset();
-    }, 600);
-  });
-
-  function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-  function shakeField(selector) {
-    const el = form.querySelector(selector);
-    if (!el) return;
-    el.classList.add('input-error');
-    el.addEventListener('animationend', () => el.classList.remove('input-error'), { once: true });
-  }
-})();
 
 /* ══════════════════════════════════════════════════
    6. FLOATING LABELS
@@ -276,7 +345,7 @@
 /* ══════════════════════════════════════════════════
    10. SERVICES HORIZONTAL SCROLL CAROUSEL
 ══════════════════════════════════════════════════ */
-/* ═════════════════════════════════════�  const section = document.querySelector('.reveal-section');
+/* ═════════════════════════════════════�  const section = document.querySelector('.reveal-section');
   const logoContainer = document.querySelector('.reveal-logo-container');
   const logoImg = logoContainer ? logoContainer.querySelector('.reveal-logo') : null;
   const mask = document.querySelector('.reveal-content-mask');
@@ -360,30 +429,30 @@
     // Dramatic zoom from 1 to 30
     const logoProg = Math.min(progress / 0.85, 1);
     const easedLogoProg = Math.pow(logoProg, 3);
-    const logoScale = 1 + (easedLogoProg * 29); 
-    
+    const logoScale = 1 + (easedLogoProg * 29);
+
     // Logo fades out late (0.6 -> 0.95)
     const logoOpacity = progress < 0.6 ? 1 : 1 - ((progress - 0.6) / 0.35);
-    
+
     logoContainer.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
     logoContainer.style.opacity = Math.max(logoOpacity, 0);
 
     // 2. Text Reveal — Delayed until mid-zoom (progress 0.35)
     const textStart = 0.35;
     const textEnd = 0.85;
-    
+
     if (progress > textStart) {
       const textProg = Math.min((progress - textStart) / (textEnd - textStart), 1);
       const easedTextProg = 1 - Math.pow(1 - textProg, 2);
-      
+
       // The text starts extremely tiny and grows to readable size
       // We must counteract the logo's massive scale to keep text size elegant
       const targetScale = 0.05 + (easedTextProg * 0.95); // Absolute screen scale
       const relativeScale = targetScale / logoScale; // Corrected for parent scaling
-      
+
       const opacity = easedTextProg;
       const blur = 15 * (1 - easedTextProg);
-      
+
       content.style.opacity = opacity;
       content.style.filter = `blur(${blur}px)`;
       content.style.transform = `scale(${relativeScale})`;
